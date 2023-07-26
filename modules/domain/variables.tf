@@ -1,3 +1,7 @@
+############
+# REQUIRED #
+############
+
 variable "domain" {
   description = "Name of the email domain."
   nullable    = false

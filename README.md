@@ -14,6 +14,17 @@ module "domain" {
 }
 ```
 
+`user`:
+
+```
+module "user" {
+  source = "jessiehernandez/ses/aws//modules/user"
+
+  domain_arn = module.domain.arn
+  name       = "johndoe"
+}
+```
+
 ## Authors
 
 Modules are maintained by [Jessie Hernandez](https://github.com/jessiehernandez).
