@@ -16,6 +16,12 @@ variable "name" {
 # OPTIONAL #
 ############
 
+variable "allowed_email_identities" {
+  default     = []
+  description = "ARNs of the email identities that this user will be allowed to send emails from."
+  type        = list(string)
+}
+
 variable "force_destroy" {
   default     = false
   description = "Destroy the user even if it has non-Terraform-managed IAM access keys, login profile or MFA devices."

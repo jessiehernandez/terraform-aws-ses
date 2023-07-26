@@ -1,7 +1,7 @@
 data "aws_iam_policy_document" "ses" {
   statement {
     actions   = ["ses:SendEmail", "ses:SendRawEmail"]
-    resources = [var.domain_arn]
+    resources = merge([var.domain_arn], var.allowed_email_identities)
     sid       = "AllowSendingEmails"
   }
 }
